@@ -1,7 +1,7 @@
 const tracker = require('@middleware.io/node-apm');
 tracker.track({
   serviceName: process.env.SERVICE_NAME,
-  accessToken: process.env.ACCESS_TOKEN,
+  accessToken: 'hmetylqdrnlkcskzothsbgflgsonhrhcnvjt',
   target: process.env.TARGET,
 });
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/user', (req, res) => {
-  const userId = req.query.id;
+  const userId = req.query;
   if (!userId) {
     throw new Error('Missing user ID');
   }
