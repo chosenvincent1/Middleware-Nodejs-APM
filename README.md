@@ -26,7 +26,7 @@ npm install
 
 ### 3. Add Middleware Credentials
 
-serviceName= your-service-name
+serviceName= your-service-name <br>
 accessToken=your_middleware_api_key
 
 ### 4. Start server
