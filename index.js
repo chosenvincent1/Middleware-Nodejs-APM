@@ -1,8 +1,8 @@
 const tracker = require('@middleware.io/node-apm');
 tracker.track({
-  serviceName: "Node APM Example",
-  accessToken: "hmetylqdrnlkcskzothsbgflgsonhrhcnvjt",
-  target: "https://ccang.middleware.io",
+  serviceName: process.env.SERVICE_NAME,
+  accessToken: process.env.ACCESS_TOKEN,
+  target: process.env.TARGET,
 });
 
 const express = require('express');
