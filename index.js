@@ -10,7 +10,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
+app.get('/', (req) => {
   res.send('Hello, Middleware APM!');
 });
 
@@ -23,7 +23,7 @@ app.get('/user', (req, res) => {
 });
 
 let memoryHolder = [];
-app.get('/leaky', (req, res) => {
+app.get('/leaky', (req) => {
   memoryHolder.push(new Array(1e6).fill('*'));
   res.send('Leaking...');
 });
